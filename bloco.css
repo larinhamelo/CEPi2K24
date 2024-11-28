@@ -1,0 +1,12 @@
+.flexivel{
+    display:flex;
+}
+.bloco{
+    background-color: palevioletred;
+    flex: 10px;
+    margin: 90px;
+    padding: 20px;
+    min-width: 300px;
+    border-radius: 11pt;
+    transition: 1s;
+}

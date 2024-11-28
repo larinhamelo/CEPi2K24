@@ -1,0 +1,86 @@
+ Definindo classes para Aluno e Livro
+class Aluno:
+    def __init__(self, nome, idade, matricula):
+        self.nome = nome
+        self.idade = idade
+        self.matricula = matricula
+
+    def __str__(self):
+        return f'Nome: {self.nome}, Idade: {self.idade}, Matrícula: {self.matricula}'
+
+
+class Livro:
+    def __init__(self, titulo, autor, isbn):
+        self.titulo = titulo
+        self.autor = autor
+        self.isbn = isbn
+
+    def __str__(self):
+        return f'Título: {self.titulo}, Autor: {self.autor}, ISBN: {self.isbn}'
+
+
+# Listas para armazenar alunos e livros
+alunos = []
+livros = []
+
+# Função para cadastrar um aluno
+def cadastrar_aluno():
+    nome = input("Digite o nome do aluno:glauber ")
+    idade = input("Digite a idade do aluno:42 ")
+    matricula = input("Digite o número da matrícula do aluno:12345 ")
+    aluno = Aluno(nome, idade, matricula)
+    alunos.append(aluno)
+    print(f"Aluno {nome} cadastrado com sucesso!")
+
+# Função para cadastrar um livro
+def cadastrar_livro():
+    titulo = input("Digite o título do livro: ")
+    autor = input("Digite o autor do livro: ")
+    isbn = input("Digite o ISBN do livro: ")
+    livro = Livro(titulo, autor, isbn)
+    livros.append(livro)
+    print(f"Livro '{titulo}' cadastrado com sucesso!")
+
+# Função para listar alunos cadastrados
+def listar_alunos():
+    if not alunos:
+        print("Nenhum aluno cadastrado.")
+    else:
+        print("Lista de alunos:")
+        for aluno in alunos:
+            print(aluno)
+
+# Função para listar livros cadastrados
+def listar_livros():
+    if not livros:
+        print("Nenhum livro cadastrado.")
+    else:
+        print("Lista de livros:")
+        for livro in livros:
+            print(livro)
+
+# Função principal do programa
+def menu():
+    while True:
+        print("\nMenu de opções:")
+        print("1. Cadastrar Aluno")
+        print("2. Cadastrar Livro")
+        print("3. Listar Alunos")
+        print("4. Listar Livros")
+        print("5. Sair")
+
+        opcao = input("Escolha uma opção: ")
+
+        if opcao == '1':
+            cadastrar_aluno()
+        elif opcao == '2':
+            cadastrar_livro()
+        elif opcao == '3':
+            listar_alunos()
+        elif opcao == '4':
+            listar_livros()
+        elif opcao == '5':
+            print("Saindo do programa...")
+            break
+        else:
+            print("Opção inválida. Tente novamente.")

@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#navegacao{
+    width: 100%;
+    background-color: pink;
+    display: inline;
+
+}
+.menu{
+    background-color: pink;
+    padding: 10pt;
+    margin: 12pt;
+    transition: 1s;
+    text-transform: capitalize;
+    color: black;
+    font-family: inherit;
+    display: inline-block;
+
+}
+.menu:hover{
+    background-color: darksalmon;
+    color:white;
+    transition: 1s;
+    border-radius: 5pt;
+}
